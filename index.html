@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+	<body ng-app="myApp">
+
+		
+		<div ng-controller="myCtrl">
+			<div ng-repeat="url in urlArray">
+				<button ng-click="myFunction()">Button Number {{$index}}</button>
+				<my-directive my-url="url" my-text="text"></my-directive>
+			</div>
+		</div>
+		<script src="app.js"></script>
+		<script src="myCtrl.js"></script>
+		<script src="directive.js"></script>
+		<script src="service.js"></script>
+	</body>
+</html>
